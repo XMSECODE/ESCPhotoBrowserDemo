@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ESCPhotoBrowswerCollectionViewCellId" id="mfe-Jc-UHv" customClass="ESCPhotoBrowswerCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="287" height="244"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="287" height="244"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2od-Bv-AJP">
+                        <rect key="frame" x="0.0" y="0.0" width="287" height="244"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gjc-w9-euW">
+                                <rect key="frame" x="0.0" y="0.0" width="287" height="244"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Gjc-w9-euW" firstAttribute="leading" secondItem="2od-Bv-AJP" secondAttribute="leading" id="IXy-51-laF"/>
+                            <constraint firstItem="Gjc-w9-euW" firstAttribute="top" secondItem="2od-Bv-AJP" secondAttribute="top" id="JTI-3L-fUq"/>
+                            <constraint firstItem="Gjc-w9-euW" firstAttribute="height" secondItem="2od-Bv-AJP" secondAttribute="height" id="ZWS-id-sfB"/>
+                            <constraint firstAttribute="bottom" secondItem="Gjc-w9-euW" secondAttribute="bottom" id="afO-y3-hWz"/>
+                            <constraint firstItem="Gjc-w9-euW" firstAttribute="width" secondItem="2od-Bv-AJP" secondAttribute="width" id="hKC-SQ-OTz"/>
+                            <constraint firstAttribute="trailing" secondItem="Gjc-w9-euW" secondAttribute="trailing" id="vZO-Ds-zx3"/>
+                        </constraints>
+                    </scrollView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2od-Bv-AJP" secondAttribute="trailing" id="17g-sf-wyz"/>
+                <constraint firstItem="2od-Bv-AJP" firstAttribute="height" secondItem="mfe-Jc-UHv" secondAttribute="height" id="Lbl-sj-aMA"/>
+                <constraint firstAttribute="bottom" secondItem="2od-Bv-AJP" secondAttribute="bottom" id="UzH-fD-NGm"/>
+                <constraint firstItem="2od-Bv-AJP" firstAttribute="width" secondItem="mfe-Jc-UHv" secondAttribute="width" id="a5R-aA-7Jg"/>
+                <constraint firstItem="2od-Bv-AJP" firstAttribute="leading" secondItem="mfe-Jc-UHv" secondAttribute="leading" id="bum-QP-Hp1"/>
+                <constraint firstItem="2od-Bv-AJP" firstAttribute="top" secondItem="mfe-Jc-UHv" secondAttribute="top" id="emT-kC-sLW"/>
+            </constraints>
+            <size key="customSize" width="287" height="244"/>
+            <connections>
+                <outlet property="contentScrollView" destination="2od-Bv-AJP" id="QtK-Bo-JaV"/>
+                <outlet property="imageView" destination="Gjc-w9-euW" id="O7K-OT-WvK"/>
+            </connections>
+            <point key="canvasLocation" x="322.39999999999998" y="89.055472263868069"/>
+        </collectionViewCell>
+    </objects>
+</document>
