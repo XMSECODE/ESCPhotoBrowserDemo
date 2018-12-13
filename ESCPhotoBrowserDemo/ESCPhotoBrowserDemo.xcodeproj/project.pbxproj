@@ -54,6 +54,7 @@
 		F08F50D521AFE2B800E0822F /* SDWebImageWebPCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F08F50B921AFE2B700E0822F /* SDWebImageWebPCoder.m */; };
 		F08F50DE21AFE61700E0822F /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F08F50D921AFE61700E0822F /* FLAnimatedImage.m */; };
 		F08F50DF21AFE61700E0822F /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F08F50DA21AFE61700E0822F /* FLAnimatedImageView.m */; };
+		F0C0D97A21B7780F0069F6FC /* ESCNavigationControllerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C0D97921B7780F0069F6FC /* ESCNavigationControllerAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +143,8 @@
 		F08F50DB21AFE61700E0822F /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
 		F08F50DC21AFE61700E0822F /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
 		F08F50DD21AFE61700E0822F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0C0D97821B7780F0069F6FC /* ESCNavigationControllerAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESCNavigationControllerAnimation.h; sourceTree = "<group>"; };
+		F0C0D97921B7780F0069F6FC /* ESCNavigationControllerAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESCNavigationControllerAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +214,8 @@
 			children = (
 				F08F507A21AFD50300E0822F /* ESCPhotoBrowserViewController.h */,
 				F08F507B21AFD50300E0822F /* ESCPhotoBrowserViewController.m */,
+				F0C0D97821B7780F0069F6FC /* ESCNavigationControllerAnimation.h */,
+				F0C0D97921B7780F0069F6FC /* ESCNavigationControllerAnimation.m */,
 				F08F507D21AFD85F00E0822F /* ESCPhotoBrowswerCollectionViewCell.h */,
 				F08F507E21AFD85F00E0822F /* ESCPhotoBrowswerCollectionViewCell.m */,
 				F08F508021AFD86F00E0822F /* ESCPhotoBrowswerCollectionViewCell.xib */,
@@ -397,6 +402,7 @@
 				F08F50D021AFE2B800E0822F /* SDImageCacheConfig.m in Sources */,
 				F08F50D421AFE2B800E0822F /* UIButton+WebCache.m in Sources */,
 				F08F50C221AFE2B800E0822F /* FLAnimatedImageView+WebCache.m in Sources */,
+				F0C0D97A21B7780F0069F6FC /* ESCNavigationControllerAnimation.m in Sources */,
 				F08F50C121AFE2B800E0822F /* SDWebImageCodersManager.m in Sources */,
 				F08F50BF21AFE2B800E0822F /* SDWebImageFrame.m in Sources */,
 				F08F50BB21AFE2B800E0822F /* UIImage+WebP.m in Sources */,

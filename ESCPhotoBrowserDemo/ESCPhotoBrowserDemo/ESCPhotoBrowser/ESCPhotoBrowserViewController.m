@@ -8,8 +8,9 @@
 
 #import "ESCPhotoBrowserViewController.h"
 #import "ESCPhotoBrowswerCollectionViewCell.h"
+#import "ESCNavigationControllerAnimation.h"
 
-@interface ESCPhotoBrowserViewController () <UICollectionViewDelegate, UICollectionViewDataSource,ESCPhotoBrowswerCollectionViewCellDelegate>
+@interface ESCPhotoBrowserViewController () <UICollectionViewDelegate, UICollectionViewDataSource,ESCPhotoBrowswerCollectionViewCellDelegate, UINavigationControllerDelegate>
 
 @property(nonatomic,weak)UICollectionView* collectionView;
 
@@ -21,6 +22,8 @@
 
 @property(nonatomic,assign)BOOL animationCompleted;
 
+@property(nonatomic,weak)UISwipeGestureRecognizer* popSwipeGesture;
+
 @end
 
 @implementation ESCPhotoBrowserViewController
@@ -29,6 +32,22 @@
     [super viewDidLoad];
     
     [self setupUI];
+    
+    [self setGesture];
+    
+    self.navigationController.delegate = self;
+
+}
+
+- (void)setGesture {
+    UISwipeGestureRecognizer *popSwipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(gesturePopToViewController)];
+    popSwipeGesture.direction = UISwipeGestureRecognizerDirectionDown;
+    [self.view addGestureRecognizer:popSwipeGesture];
+    self.popSwipeGesture = popSwipeGesture;
+}
+
+- (void)gesturePopToViewController {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)setupUI {
@@ -140,6 +159,20 @@
         NSInteger currentIndex = self.collectionView.contentOffset.x / [UIScreen mainScreen].bounds.size.width;
         [self.dataSource photoBroswerViewController:self didClickRightButtonItemIndex:currentIndex];
     }
+}
+
+#pragma mark - UINavigationControllerDelegate
+
+- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                            animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                         fromViewController:(UIViewController *)fromVC
+                                                           toViewController:(UIViewController *)toVC  NS_AVAILABLE_IOS(7_0) {
+    if(operation == UINavigationControllerOperationPop) {
+        ESCNavigationControllerAnimation *animation = [[ESCNavigationControllerAnimation alloc] init];
+        animation.navigationBarIsHidden = self.isHiddenNavigationBar;
+        return animation;
+    }
+    return nil;
 }
 
 @end
